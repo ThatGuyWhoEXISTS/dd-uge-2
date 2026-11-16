@@ -1,0 +1,134 @@
+[gd_scene format=3 uid="uid://bfu5kkgvpfrcx"]
+
+[ext_resource type="Script" uid="uid://dyhejip1goa22" path="res://Scenes&Scripts/InteractiveScenes/canvas_layer.gd" id="1_8qlog"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_qnpof"]
+font_size = 24
+
+[node name="PauseMenu" type="CanvasLayer" unique_id=1459380728]
+script = ExtResource("1_8qlog")
+
+[node name="Control" type="Control" parent="." unique_id=123739560]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="Control" unique_id=833644335]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.18431373, 0.18431373, 0.18431373, 1)
+
+[node name="Label" type="Label" parent="Control/ColorRect" unique_id=102888379]
+layout_mode = 0
+offset_left = 496.0
+offset_top = 190.0
+offset_right = 662.0
+offset_bottom = 224.0
+text = "Money, Please"
+label_settings = SubResource("LabelSettings_qnpof")
+
+[node name="PauseScreen" type="Control" parent="Control" unique_id=706839967]
+anchors_preset = 0
+offset_left = 290.0
+offset_top = 162.0
+offset_right = 862.0
+offset_bottom = 486.0
+
+[node name="ReturnToGame" type="Button" parent="Control/PauseScreen" unique_id=1336281650]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -31.0
+offset_top = -84.5
+offset_right = 31.0
+offset_bottom = -53.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Return"
+
+[node name="SystemMenuButton" type="Button" parent="Control/PauseScreen" unique_id=386580895]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -35.0
+offset_top = -40.5
+offset_right = 35.0
+offset_bottom = -9.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Settings"
+
+[node name="ReturnToMenu" type="Button" parent="Control/PauseScreen" unique_id=143326854]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -65.0
+offset_top = 3.5
+offset_right = 65.0
+offset_bottom = 34.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Return to Menu"
+
+[node name="System" type="Control" parent="Control" unique_id=1892736270]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/System" unique_id=731651090]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -119.0
+offset_top = -71.0
+offset_right = 119.0
+offset_bottom = 99.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Control/System/VBoxContainer" unique_id=702586369]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Control/System/VBoxContainer/HBoxContainer" unique_id=1473318499]
+custom_minimum_size = Vector2(60, 0)
+layout_mode = 2
+text = "Music"
+
+[node name="MusicSlider" type="HSlider" parent="Control/System/VBoxContainer/HBoxContainer" unique_id=307340403]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+size_flags_horizontal = 3
+max_value = 1.0
+step = 0.05
+value = 0.5
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="Control/System/VBoxContainer" unique_id=1234200262]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="ReturnToPause" type="Button" parent="Control/System/VBoxContainer/HBoxContainer2" unique_id=849537374]
+layout_mode = 2
+text = "Return"
