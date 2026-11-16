@@ -1,0 +1,54 @@
+[gd_scene format=3 uid="uid://cvs0mlplha3sb"]
+
+[ext_resource type="Script" uid="uid://c3qfv0ftnrcf4" path="res://Scenes&Scripts/InteractiveScenes/control.gd" id="1_5d2nd"]
+[ext_resource type="Texture2D" uid="uid://c0tq5a6u6scrw" path="res://Resources/UIAssets/istockphoto-670126518-612x612.jpg" id="2_qv3ja"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_qnpof"]
+font_size = 32
+font_color = Color(0.8239239, 0.82392395, 0.8239239, 1)
+
+[node name="Menu" type="CanvasLayer" unique_id=610335446]
+
+[node name="Control" type="Control" parent="." unique_id=10342449]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 1.0
+offset_bottom = -2.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_5d2nd")
+
+[node name="Sprite2D" type="Sprite2D" parent="Control" unique_id=1794445777]
+position = Vector2(577, 322)
+scale = Vector2(1.885621, 1.7095491)
+texture = ExtResource("2_qv3ja")
+
+[node name="Label" type="Label" parent="Control" unique_id=51883822]
+layout_mode = 1
+offset_left = 453.0
+offset_top = 185.0
+offset_right = 675.0
+offset_bottom = 230.0
+text = "Money, Please"
+label_settings = SubResource("LabelSettings_qnpof")
+
+[node name="Start" type="Button" parent="Control" unique_id=1771090118]
+layout_mode = 1
+offset_left = 547.0
+offset_top = 250.0
+offset_right = 588.0
+offset_bottom = 281.0
+text = "Play"
+
+[node name="Settings" type="Button" parent="Control" unique_id=1185045289]
+layout_mode = 0
+offset_left = 531.0
+offset_top = 296.0
+offset_right = 601.0
+offset_bottom = 327.0
+text = "Settings"
+
+[node name="Camera2D" type="Camera2D" parent="Control" unique_id=898852994]
+position = Vector2(574, 323)

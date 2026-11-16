@@ -1,0 +1,60 @@
+[gd_scene format=3 uid="uid://c7d1phtfahc60"]
+
+[ext_resource type="Texture2D" uid="uid://c0tq5a6u6scrw" path="res://Resources/UIAssets/istockphoto-670126518-612x612.jpg" id="1_tafyh"]
+[ext_resource type="Script" uid="uid://c3qfv0ftnrcf4" path="res://Scenes&Scripts/InteractiveScenes/control.gd" id="1_yll34"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_qnpof"]
+font_size = 32
+font_color = Color(0.8239239, 0.82392395, 0.8239239, 1)
+
+[node name="Menu" type="CanvasLayer" unique_id=610335446]
+
+[node name="Control" type="Control" parent="." unique_id=10342449]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 1.0
+offset_bottom = -2.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_yll34")
+
+[node name="Sprite2D" type="Sprite2D" parent="Control" unique_id=1794445777]
+position = Vector2(577, 322)
+scale = Vector2(1.885621, 1.7095491)
+texture = ExtResource("1_tafyh")
+
+[node name="Label" type="Label" parent="Control" unique_id=51883822]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -122.0
+offset_top = -145.0
+offset_right = 100.0
+offset_bottom = -100.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Money, Please"
+label_settings = SubResource("LabelSettings_qnpof")
+
+[node name="Start" type="Button" parent="Control" unique_id=1771090118]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.44200003
+anchor_right = 0.5
+anchor_bottom = 0.44200003
+offset_left = -29.0
+offset_top = -19.416016
+offset_right = 12.0
+offset_bottom = 11.583984
+grow_horizontal = 2
+grow_vertical = 2
+text = "Play"
+
+[node name="Camera2D" type="Camera2D" parent="Control" unique_id=898852994]
+position = Vector2(574, 323)
