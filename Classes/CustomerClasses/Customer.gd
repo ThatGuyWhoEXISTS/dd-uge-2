@@ -31,12 +31,12 @@ func _init(new_name: String, sprite_path: String = "") -> void:
 	data = file.get_as_text().split("\n")
 	customer_data = CustomerData.new(data)
 	sprite = Sprite2D.new()
+	sprite.scale = Vector2(7,7)
 	if sprite_path != "":
 		sprite.texture = load(sprite_path)
 	else:
-		sprite.texture = load("res://Resources/Customers/" + new_name + "/" + new_name.to_lower() + ".jpg")
+		sprite.texture = load("res://Resources/Customers/" + new_name + "/" + new_name.to_lower() + ".png")
 	add_child(sprite)
-	
 
 func want_to_speak() -> void:
 	# Add sprite to scenetree
